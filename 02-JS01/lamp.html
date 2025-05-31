@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лампочка</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        img {
+            width: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Керування лампочкою</h2>
+
+<button onclick="turnOn()">Включити</button>
+<button onclick="turnOff()">Вимкнути</button>
+<br>
+<img id="bulb" src="images/bulb-off.png" alt="Лампочка">
+
+<script>
+    function turnOn() {
+        document.getElementById('bulb').src = 'images/bulb-on.png';
+    }
+
+    function turnOff() {
+        document.getElementById('bulb').src = 'images/bulb-off.png';
+    }
+</script>
+
+</body>
+</html>

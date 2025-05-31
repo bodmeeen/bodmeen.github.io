@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.myclass {
+    font-weight: bold;
+    color: #2d264a;
+}
+
+.n1 {
+    font-size: 28px;
+}
+
+.n2 {
+    font-size: 24px;
+}
+
+.temp {
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

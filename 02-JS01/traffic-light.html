@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Світлофор</title>
+    <style>
+        .traffic-light {
+            width: 100px;
+            background: #333;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 50px auto;
+        }
+
+        .light {
+            width: 60px;
+            height: 60px;
+            margin: 15px auto;
+            border-radius: 50%;
+            background-color: #111;
+            transition: background-color 0.5s;
+        }
+
+        #red.on { background-color: red; }
+        #yellow.on { background-color: yellow; }
+        #green.on { background-color: green; }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Симулятор світлофору</h2>
+
+<div class="traffic-light">
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+</div>
+
+<button onclick="changeLight()">Змінити колір</button>
+
+<script>
+    const lights = ['red', 'yellow', 'green'];
+    let current = 0;
+
+    function changeLight() {
+        // Очистити всі
+        lights.forEach(light => {
+            document.getElementById(light).classList.remove('on');
+        });
+
+        // Увімкнути поточний
+        document.getElementById(lights[current]).classList.add('on');
+
+        // Змінити на наступний
+        current = (current + 1) % lights.length;
+    }
+</script>
+
+</body>
+</html>
