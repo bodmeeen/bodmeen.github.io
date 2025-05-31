@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Домашнє завдання</title>
+</head>
+<body>
+    <h1 id="headline">Я ВІТАЮ ТЕБЕ СВІТ!!!</h1>
+    <button id="deleteBtn">Видалити заголовок</button>
+    <button id="restoreBtn" style="display:none;">Відновити заголовок</button>
+
+    <script>
+        "use strict";
+
+        let deleteBtn = document.getElementById("deleteBtn");
+        let restoreBtn = document.getElementById("restoreBtn");
+
+
+        const headingText = "Я ВІТАЮ ТЕБЕ СВІТ!!!";
+
+        deleteBtn.onclick = function () {
+            const h1 = document.getElementById("headline");
+            if (h1) {
+                h1.remove(); 
+                deleteBtn.style.display = "none";
+                restoreBtn.style.display = "inline";
+            }
+        };
+
+        restoreBtn.onclick = function () {
+            if (!document.getElementById("headline")) {
+                const newH1 = document.createElement("h1");
+                newH1.id = "headline";
+                newH1.textContent = headingText;
+                document.body.insertBefore(newH1, deleteBtn);
+            }
+            restoreBtn.style.display = "none";
+            deleteBtn.style.display = "inline";
+        };
+    </script>
+</body>
+</html>
